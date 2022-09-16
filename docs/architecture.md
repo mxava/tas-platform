@@ -13,7 +13,7 @@ sequenceDiagram
     TAS Platform->>CI: open PR in target recipe, bump build number
     Note over TAS Platform,git: if all packages to be rendered do not already exist in destination
     TAS Platform->>CI: check in on status of builds every 10 seconds until build completes/fails
-    rect rgb(200, 150, 255)
+    rect rgb(150, 100, 205)
     CI->>Build System: run the builds
     Build System->>TAS Platform: send build artifacts to destination
     Build System->>CI: return build status
