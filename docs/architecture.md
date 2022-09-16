@@ -6,6 +6,7 @@ sequenceDiagram
     participant TAS Platform
     participant CI
     participant Build System
+    Note over TAS Platform,CI: update submodule prior to building
     TAS Platform-->>CI: clone/pull aggregate
     TAS Platform->>$DATABASE: iterate through aggregate<br/>calculate/store dependency trees based on rendered build<br/>environments from conda-build to determine priority
     $DATABASE->>TAS Platform: select recipes in order of priority
