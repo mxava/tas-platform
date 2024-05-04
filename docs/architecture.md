@@ -17,8 +17,8 @@ sequenceDiagram
     TAS Platform-->>CI: check in on status of builds<br/>every 10 seconds until build completes/fails
     rect rgb(150, 100, 205)
     CI->>Build System: run the builds
-    Build System->>S3 Bucket: send build artifacts to destination
     Build System->>CI: return build status
+    Build System->>S3 Bucket: send build artifacts to destination
     end
     CI->>TAS Platform: return build status
     end
